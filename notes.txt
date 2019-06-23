@@ -1,0 +1,12 @@
+■ Fix error "ERROR: Failed to install the following Android SDK packages as some licences have not been accepted. build-tools;28.0.3 Android SDK Build-Tools 28.0.3 platforms;android-28 Android SDK Platform 28 To build this project, accept the SDK license agreements and install the missing components using the Android Studio SDK Manager."
+
+https://stackoverflow.com/questions/54273412/failed-to-install-the-following-android-sdk-packages-as-some-licences-have-not-b
+
+→ You need to accept the licences before building.
+
+According to AndroidSDK docs you can use the following command depending on the sdkmanager location:
+
+yes | sdkmanager --licenses
+macOS : yes | sudo ~/Library/Android/sdk/tools/bin/sdkmanager --licenses
+
+Windows: %ANDROID_HOME%/tools/bin/sdkmanager --licenses
